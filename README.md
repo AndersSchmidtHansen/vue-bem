@@ -32,6 +32,10 @@ A different example with a more tedious component name like
 'congratulations-card':
 ```
 Vue.component('congratulations-card', {
+  props: [
+    'title',
+    'message'
+  ],
   template:
     `<div v-bem>
       <section v-bem:content>
