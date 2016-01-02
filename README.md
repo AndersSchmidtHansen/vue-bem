@@ -10,9 +10,9 @@ It can produce BEM classes similar to those Harry Roberts advocate in
 
 With that said, if you write this:
 ```
-<div v-bem:,premium v-bem:o-media.block>
- <img src="" alt="" v-bem:photo v-bem:o-media,img.block v-bem:c-avatar.block />
- <p v-bem:bio v-bem:o-media,body,large.block>...</p>
+<div v-bem:o-media.block v-bem:,premium>
+ <img src="" alt="" v-bem:o-media,img.block v-bem:photo v-bem:c-avatar.block />
+ <p v-bem:o-media,body,large.block v-bem:bio>...</p>
 </div>
 ```
 
