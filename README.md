@@ -8,6 +8,8 @@ the component's name found in $options.name.
 It can produce BEM classes similar to those Harry Roberts advocate in
 [this article](http://bit.ly/1R3nlNG).
 
+In its essence it's just a helper for myself, but I thought maybe it would help others out there. Feel free to improve it.
+
 With that said, if you write this:
 ```
 Vue.component('user', {
