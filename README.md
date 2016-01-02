@@ -10,10 +10,14 @@ It can produce BEM classes similar to those Harry Roberts advocate in
 
 With that said, if you write this:
 ```
-<div v-bem:o-media.block v-bem:,premium>
- <img src="" alt="" v-bem:o-media,img.block v-bem:photo v-bem:c-avatar.block />
- <p v-bem:o-media,body,large.block v-bem:bio>...</p>
-</div>
+Vue.component('user', {
+  template: `
+    <div v-bem:o-media.block v-bem:,premium>
+     <img src="" alt="" v-bem:o-media,img.block v-bem:photo v-bem:c-avatar.block />
+     <p v-bem:o-media,body,large.block v-bem:bio>...</p>
+    </div>
+  `
+})
 ```
 
 It produces:
@@ -27,15 +31,18 @@ It produces:
 A different example with a more tedious component name like
 'congratulations-card':
 ```
- <div v-bem>
-   <section v-bem:content>
-     <div v-bem:title>{{ title }}</div>
-     <p v-bem:message>{{ message }}</p>
-   </section>    
-   <footer v-bem:footer>
-     <slot name="footer"></slot>
-   </footer>
- </div>
+Vue.component('congratulations-card', {
+  template:
+    `<div v-bem>
+      <section v-bem:content>
+        <div v-bem:title>{{ title }}</div>
+        <p v-bem:message>{{ message }}</p>
+      </section>    
+      <footer v-bem:footer>
+        <slot name="footer"></slot>
+      </footer>
+    </div>`
+})
 ```
 
 Produces:
