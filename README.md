@@ -61,3 +61,34 @@ Produces:
  <footer class="c-congratulations-card__footer"></footer>
 </div>
 ```
+
+### Installation
+
+``` bash
+$ npm install vue-bem
+```
+
+### Usage
+
+First, import it...
+
+``` javascript
+import VueBem from './directives/vue-bem'
+```
+
+Then register it...
+``` javascript
+Vue.directive('bem', VueBem)
+```
+
+Or, in `vue-loader` or `vue-cli` situations where single file components are used...
+``` javascript
+import VueBem from '../directives/vue-bem'
+export default {
+  directives: {
+    'bem': VueBem
+  }
+}
+```
+
+
