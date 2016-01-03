@@ -73,17 +73,17 @@ $ npm install vue-bem
 First, import it...
 
 ``` javascript
-import VueBem from './directives/vue-bem'
+import VueBem from 'vue-bem'
 ```
 
-Then register it...
+Then register it globally...
 ``` javascript
-Vue.directive('bem', VueBem)
+Vue.use(VueBem)
 ```
 
-Or, in `vue-loader` or `vue-cli` situations where single file components are used...
+Or locally, for `vue-loader` or `vue-cli` situations where single file components are used...
 ``` javascript
-import VueBem from '../directives/vue-bem'
+import VueBem from 'vue-bem'
 export default {
   directives: {
     'bem': VueBem
